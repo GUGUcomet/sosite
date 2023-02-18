@@ -5,6 +5,8 @@
 </script>
 
 <main>
+  <style class="scss">
+  </style>
   <div>
     <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
       <img src="./vite.svg" class="logo" alt="Vite Logo" />

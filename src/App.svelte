@@ -27,6 +27,21 @@
         </div>
       </div>
     </header>
+    <div class="title">
+      <div class="title-left">
+        <h1>DASHBOARD</h1>
+        <ul class="breadcrum">
+          <li><a href="#">home</a></li>
+          <li>-</li>
+          <li><a href="#">dashboards</a></li>
+          <li>-</li>
+          <li><a href="#">default</a></li>
+        </ul>
+      </div>
+      <div class="title-right">
+        <a href="/" class="btn btn-white"> filter </a>
+      </div>
+    </div>
 
     <div class="card">
       <Counter />
@@ -38,14 +53,18 @@
 <style>
   .wrap {
     width: 100vw;
+    background: url(/src/assets/header-bg.jpg);
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
   }
+
+  /* header */
   header {
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
     height: 65px;
     border-bottom: var(--bs-header-tablet-and-mobile-default-border);
-    background-color: #000;
     padding: 0 15px;
   }
   .header-left {
@@ -53,9 +72,8 @@
   }
   .header-logo {
     display: block;
-    height: 35px;
+    height: 30px;
     width: 35px;
-    padding: 10px;
     background: url(/src/assets/demo2.png) 50% 50% no-repeat;
     background-size: contain;
   }
@@ -85,6 +103,50 @@
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
   }
+  /* //header */
+  .title {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  .title h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 4px 0;
+  }
+  .title-left .breadcrum {
+    font-size: 0.75rem;
+    opacity: 0.75;
+    display: flex;
+    gap: 0 4px;
+    margin: 4px 0;
+  }
+  .title-left .breadcrum a {
+    color: #fff;
+  }
+  .title-left .breadcrum a:hover {
+    color: blue;
+  }
+
+  .title-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-right .btn {
+    color: var(--bs-white-inverse);
+    border-color: var(--bs-white);
+    background-color: var(--bs-white) !important;
+    border: 0;
+    padding: calc(0.775rem + 1px) calc(1.5rem + 1px);
+    color: var(--bs-text-white);
+    display: inline-flex;
+    align-items: center;
+  }
+
   .animation-blink {
     animation: animationBlink 1s steps(5, start) infinite;
   }
